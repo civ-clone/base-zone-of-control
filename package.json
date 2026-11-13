@@ -1,0 +1,35 @@
+{
+  "name": "@civ-clone/base-zone-of-control",
+  "version": "0.1.0",
+  "description": "A zone of control criterion for move actions: which movers it applies to, which neighbouring units exert it and which moves are exempt are the ruleset's.",
+  "repository": "git@github.com:civ-clone/base-zone-of-control.git",
+  "keywords": [
+    "typescript",
+    "civilization"
+  ],
+  "author": "dom111 <dom111@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "npm run ts:compile && npm run prettier:format",
+    "prettier:check": "prettier --config .prettierrc --check '**/*.ts'",
+    "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
+    "test": "ts-mocha ./tests/*.test.ts",
+    "ts:compile": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^16.0.0",
+    "chai": "^4.0.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.0.0"
+  },
+  "dependencies": {
+    "@civ-clone/core-rule": "^0.1.9",
+    "@civ-clone/core-unit": "^0.1.31",
+    "@civ-clone/core-world": "^0.1.0"
+  }
+}
